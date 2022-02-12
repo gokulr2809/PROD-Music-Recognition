@@ -1,4 +1,4 @@
-# PROD-MusicRecognition
+# PROD-Music Recognition
 
 Prod a music recognition system that identifies the audio captured in the microphone and returns the song details and its spotify link.
 
