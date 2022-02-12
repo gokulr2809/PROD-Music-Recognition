@@ -1,0 +1,206 @@
+*
+{
+    font-size: 18px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    line-height: 50px;
+    text-decoration: none;
+    
+}
+.main
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #003060;
+    width: 100%;
+    height: 100%;
+    
+}
+nav
+{
+position: relative;
+margin-top: 25px;
+margin-left: 725px;
+margin-right: 0px;
+width: 400px;
+height: 50px;
+background:#60A3D9;
+border-radius: 10px;
+}
+nav a 
+{
+    font-size: 18px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    line-height: 50px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    z-index: 1;
+    text-decoration: none;
+}
+nav .animation
+{
+position: absolute;
+height: 5px;
+top:0;
+z-index: 0;
+background:#000000;
+border-radius: 8px;
+}
+a:nth-child(1) 
+{
+    width: 200px;
+}
+nav .start-home,a:nth-child(1):hover~.animation
+{
+ left: 20px;
+ width: 160px;
+} 
+a:nth-child(2)
+{
+    width: 190px;
+}
+nav .start-test,a:nth-child(2):hover~.animation
+{
+ width: 160px;
+ left: 220px;
+} 
+
+div.footer
+{
+    position: fixed;
+    background:#60A3D9;
+    left:0px;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+}
+div.footer img {
+    position: relative;
+    width: 512px;
+    height: 512px;
+    bottom: 150px;
+    left: 35%;
+}
+div.rec
+{
+    position: absolute;
+    width: 512px;
+    height: 512px;
+    background:#BFD7ED;
+    border-radius: 10px;
+    border-color: #000000;
+    border-width:2px;
+    border-style:solid;
+    left: 670px;
+    top: 155px;
+}
+#click
+{
+    position: relative;
+    font-size: 40px;
+    text-align: center;
+    top: 70px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;   
+}
+#img
+{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    top: 0px;
+    right: 10px;
+}
+.button
+{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 150px;
+    left: 100px;
+    background-color: #BFD7ED;
+    border: none;
+    outline: none;
+}
+
+
+#his
+{
+    position: relative;
+    width: 80%;
+    height: 85px;
+    border-radius: 10px;
+    border-color: #000000;
+    border-width:2px;
+    border-style:solid;
+    left: 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+}
+#songimg
+{
+    position: relative;
+    border-color: #000000;
+    border-width:2px;
+    border-style:solid; 
+    margin-left: 15px; 
+    margin-top: 10px;
+
+}
+#name
+{
+   position: relative;
+   margin-left: 100px;
+    bottom: 95px;
+}
+#art
+{
+    position: relative;
+    margin-left: 100px;
+    bottom: 110px;
+}
+#logo
+{
+    position: relative;
+    margin-left: 325px;
+    bottom: 180px;
+}
+div.output
+{
+    position: absolute;
+    width: 512px;
+    height: auto;
+    background:#BFD7ED;
+    border-radius: 10px;
+    border-color: #000000;
+    border-width:2px;
+    border-style:solid;
+    left: 670px;
+    top: 120px;  
+}
+#titleimg
+{
+    position: relative;
+    left: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.r 
+{
+    position: relative;
+    text-align: center;
+}
+#spot
+{
+    position: relative;
+    width: 157.75px;
+    height: 57.5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    left: 175px;
+}

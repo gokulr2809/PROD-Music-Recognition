@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset=UTF-8>
+    <title>PROD - Music Recognition</title>
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            <a>HOME</a>
+            <a onclick="location.href='{% url 'history' %}'">HISTORY</a>
+            <div class="animation start"></div>
+        </nav>
+        {% if output.type == "yes" %}
+            <div class="output">
+                <img id="titleimg" src= "{{output.img}}" width="200px" height="200px"> 
+                <div id = "rtitle" class="r"> Title:  {{output.Title}} </div>
+                <div id = "rartist" class="r"> Artist:  {{output.ArtistName}} </div> 
+                <div id = "ralbum" class="r"> Album:  {{output.Album}} </div> 
+                <div id = "rlabel" class="r"> Label:  {{output.Label}} </div> 
+                <div id = "rrd" class="r"> Release Date:  {{output.ReleaseDate}} </div>
+                <a href= "{{output.Link}}" target="_blank">
+                <img id="spot" src="{% static 'logo2.png' %}" width = "200px" height="200px">
+                </a>
+                <img src= "{% static '4.png' %}"  onclick= "location.href='{% url 'index' %}',closen()" id="close1">
+            </div>
+        
+        {% else %}
+        <div class="output">
+            <img id="titleimg" src= "{%static '2.png'%}" width="200px" height="200px"> 
+            <div id = "rtitle" class="r"> The Music Could Not Be Found </div>
+            <img src= "{% static 'fail.png' %}"  onclick= "location.href='{% url 'index' %}',closen()" id="close2">
+        </div>
+        {% endif %}
+        <script>
+                function closen()
+                {
+                let a = document.querySelector("#close");
+                a.style.visibility='hidden';
+                }
+        </script>
+        <div class="footer">
+            <img src="{% static '1.png' %}"  width="512" height="512">
+        </div>
+    </div>
+</body>
+</html>

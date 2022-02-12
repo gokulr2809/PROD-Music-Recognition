@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset=UTF-8>
+    <title>PROD - Music Recognition</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            <a>HOME</a>
+            <a onclick="location.href='{% url 'history' %}'">HISTORY</a>
+            <div class="animation start"></div>
+        </nav>
+        <div class="rec">
+            <div id="click">CLICK TO SEARCH !</div>
+            <button onclick="recbutton(),location.href='{% url 'record' %}'"  class = "button" id="rec">
+            <img src = "{% static '2.png' %}" width="512 px" height = '512 px' id="img">
+            </button>
+            
+            <script>  
+
+                function  recbutton(){
+                document.getElementById("rec").disabled = true;
+                document.getElementById("img").src="{% static '3.gif' %}" ;
+                document.getElementById("click").textContent="RECORDING...";
+                setTimeout(function(){ 
+                    document.getElementById("click").textContent="Processing...";
+                    document.getElementById("img").src="{% static 'loading.gif' %}";
+                    }, 9000);
+                }
+                async function reqfunc()
+                {
+                    const response = await fetch('record/');
+                    const x = await response.json();
+                    var f_name = x["name"];
+                    console.log(f_name);
+                    var a =$.ajax({
+                            url : "process/",
+                            type : "GET",
+                            data : { "file" : f_name}});
+                }
+
+            </script>
+        </div>
+        <div class="footer">
+            <img src="{% static '1.png' %}"  width="512" height="512">
+        </div>
+    </div>
+</body>
+</html>

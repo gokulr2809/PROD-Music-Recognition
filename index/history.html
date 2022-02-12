@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset=UTF-8>
+    <title>PROD - Music Recognition</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            <a onclick="location.href='{% url 'index' %}'">HOME</a>
+            <a>HISTORY</a>
+            <div class="animation start"></div>
+        </nav>
+        <div class="rec">
+            <div id = 'his'>
+                <img id="songimg" src="{% static 'pic.jpg' %}" width="60px" height="60px">
+                <div id = "name"> Title: Animals </div>
+                <div id = "art"> Artist: Maroon 5 </div>
+                <img id="logo" src="{% static 'logo.png' %}" width="60px" height="60px">
+            </div>
+            
+        </div>
+        <div class="footer">
+            <img src="{% static '1.png' %}"  width="512" height="512">
+        </div>
+    </div>
+</body>
+</html>
