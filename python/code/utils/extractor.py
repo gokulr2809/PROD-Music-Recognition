@@ -1,7 +1,7 @@
 from email.mime import image
 import python.code.utils.music_finder
 
-class Data(object):
+class Data():
     def __init__(self, music_data):
         self.music_extracted_data = music_data
 
