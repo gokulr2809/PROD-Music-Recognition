@@ -9,13 +9,13 @@ from python.code.rec import *
 from python.code.git import *
 
 
-def final(rand_filename):
-    gitupload(rand_filename)
+def final():
     #requesting the api
     os.environ['api_token'] = 'Your Api Key'
     config.SPOTIFY = True
-    url_name = 'repolink'+rand_filename+'.m4a?raw=true'
-    music = MusicFinder('True',url_name)
+    with open('rec.mp4','rb') as file:
+        content = file.read()
+    music = MusicFinder('True',content)
     audio_data = Data(music.finder())
 
     class final:
