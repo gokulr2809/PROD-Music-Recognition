@@ -12,7 +12,7 @@ def final():
     #requesting the api
     os.environ['api_token'] = 'Your Api Key'
     config.SPOTIFY = True
-    with open('rec.mp4','rb') as file:
+    with open('Samples\rec.m4a','rb') as file:
         content = file.read()
     music = MusicFinder('True',content)
     audio_data = Data(music.finder())
