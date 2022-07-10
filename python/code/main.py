@@ -6,7 +6,6 @@ from python.code.utils.extractor import Data
 import python.code.config as config
 import os
 from python.code.rec import *
-from python.code.git import *
 
 
 def final():
