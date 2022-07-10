@@ -12,8 +12,8 @@ def history(request):
    
 def rec_func(request):
     if request.method == 'GET':
-        File_name = recorder()
-        output = final(File_name)
+        recorder()
+        output = final()
         print(output.type)
         return render(request,'process.html',{"con": 'False',"output":output})
 
